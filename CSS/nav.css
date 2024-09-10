@@ -1,0 +1,132 @@
+
+  .options a {
+    margin: 0 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 520;
+    letter-spacing: 2px;
+    color: black;
+  }
+  .top-text {
+    color: white;
+    font-size: 11px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 520;
+    letter-spacing: 2px;
+  }
+  nav {
+    background-color: whitesmoke;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust the max width as needed */
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .logos {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .img-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: scale-down;
+    margin: 0 10px;
+  }
+  
+  #nikelogo {
+    margin-top: 7px;
+  }
+  
+  #adidaslogo {
+    height: 40px;
+    width: 40px;
+    margin-top: 0px;
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  
+  .search-buttons {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .search{
+  --padding:14px;
+  width:max-content;
+  width: fixed;
+  display: flex;
+  align-items: center;
+  padding:var(--padding);
+  border-radius: 18px;
+  background-color: black;
+   height: 5px;
+   transition: box-shadow 0.25s;
+  
+  }
+  .search:focus-within{
+  box-shadow: 0 0 10px rgba(0,0, 0, 0.75) ;
+  
+  }
+  .search-input{
+  font-size: 12px;
+  font-family: 'Lexend',sans-serif;
+  color: #333;
+  margin-left: 2px;
+  background: transparent;
+  border:none;
+  outline: none;
+  width: 150px;
+  
+  }
+  .search-input:focus-within{
+  color :white;
+  }
+  .search-input::placeholder,
+  .search-icon{
+  border:none;
+  color:white;
+  
+  }
+  .nav-button {
+   
+  background-color: black;
+    color:white;
+  border: none;
+  
+  
+  width: 30px;
+  height: 30px;
+    
+    margin-left: 10px;
+    border-radius: 400px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-button:hover { 
+  box-shadow: 0 0 10px rgba(0,0,0,0.75);
+   
+   
+   
+  
+  }
