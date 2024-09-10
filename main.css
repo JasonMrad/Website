@@ -139,3 +139,829 @@ main {
    
     
 }
+/* Style the dropdown */
+.dropdown {
+    display: flex;
+    align-items: center;
+    }
+    :root {
+    --color-primary:white;
+    --dropdown-color:white;
+    
+    }
+    
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    
+    
+    
+    
+.menu {
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 70px;
+    }
+    
+    #darkOverlay-dropdown {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Darken effect */
+        z-index: 20; /* Ensures it’s on top of other elements */
+        pointer-events: none; /* Allows clicks to pass through */
+        transition: opacity 0.5s ease; /* Smooth transition for opacity */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Shadow effect */
+    }
+    #darkOverlay-dropdown.active {
+      visibility: visible; /* Make it visible */
+      opacity: 1; /* Fade in */
+    
+      transition: opacity 0.5s ease, visibility 0s linear 0s; /* Transition in */
+    }
+    
+    
+    
+    
+    
+    .menu li:hover .submenu {
+    height: 200px;
+    background-color:var(--dropdown-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    
+    }
+    
+    .menu > li:hover > a {
+    color: black;/*For hover on women*/
+    }
+    
+    .menu > li:hover > a::before {
+    visibility: visible;
+    scale: 1 1;
+    }
+    
+    .submenu {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    background-color: var(--color-primary);
+    height: 0px;
+    line-height: 40px;
+    box-sizing: border-box;
+    transition: height 0.3s ease-in-out;
+    z-index: 6;
+    }
+    
+    
+    
+    .menu > li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    height: 100%;
+    transition: 0.3s;
+    }
+    
+    .menu > li > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 3px;
+    left: 0px;
+    background-color: black;
+    transition: all 0.2s ease-in-out;
+    scale: 0 0;
+    visibility: hidden;
+    }
+    .dropdown-content{
+      min-width:1100px;
+      display: flex;
+      justify-content: space-evenly;
+      text-align:left;
+      justify-content: space-between;
+      background-color: white;
+      height: 100%;
+    }
+    .drop-header{
+    min-height:40px ;
+    font-size: 14.5px;
+    padding-top: 10px;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-weight: bold;
+          letter-spacing: 1.2px;
+    }
+    .header-link{
+      line-height: 0;
+      padding-top: 4px;
+    }
+    .categories-div{
+      min-width:200px;
+    }
+    .drop-body{
+      min-height: 127px;
+      font-size: 13px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+    .drop-body-p{
+      cursor: pointer;
+      width: 20px;
+      line-height: 13px;
+      color: #212529;
+      text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+     
+    
+    }
+    .drop-body-p:hover{
+     transform: scale(1.05);
+     color: #000;
+     margin-left: -4.5px;
+     
+    }
+
+
+.page-wrapper {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 450ms;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left when sidebar slides in */
+    }
+    
+    .page-content {
+    text-align: center;
+    transition: 450ms;
+    background-color: honeydew;
+    }
+    
+    .sidebar {
+    width: 400px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    
+    background-color: white;
+    color: black;
+    transition: 450ms;
+    }
+    
+    .sidebar.menu-1 {
+    right: -400px; /* Initially hidden on the right */
+    left: auto; /* Ensure it's not affected by left positioning */
+    }
+    
+    .menu-toggle.menu-1-toggle {
+    right: 25px; /* Position the toggle on the right */
+    left: auto; /* Ensure it's not affected by left positioning */
+    border-color: black;
+    color: black;
+    }
+    
+    .menu-toggle .menu-label {
+    display: block;
+    
+    }
+    
+    .menu-toggle .close-label {
+    display: none;
+    color: black;
+    padding-right: 20px;
+    }
+    
+    #menu1Toggle {
+    display: none;
+    
+    }
+    
+    #menu1Toggle:checked ~ .page-wrapper .sidebar.menu-1 {
+    right: 0; /* Slide the sidebar in from the right */
+    box-shadow: 0 0 15px #000;
+    }
+    
+    #menu1Toggle:checked ~ .page-wrapper .menu-toggle.menu-1-toggle {
+    right: 215px; /* Move the toggle to the right when the sidebar is open */
+    left: auto; /* Ensure it's not affected by left positioning */
+    }
+    
+    #menu1Toggle:checked ~ .page-wrapper .menu-toggle.menu-1-toggle .menu-label {
+    display: none;
+    
+    }
+    
+    #menu1Toggle:checked ~ .page-wrapper .menu-toggle.menu-1-toggle .close-label {
+    display: block;
+    
+    }
+    .favorites-container{
+    height: 100%;
+    }
+    #no-favorites-message {
+    position: absolute; /* Absolute positioning to center the message */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to be truly centered */
+    font-size: 14px; /* Adjust as needed */
+    color: #555; /* Adjust as needed */
+    text-align: center; /* Center text inside the message */
+    display: flex;justify-content: center;text-align: center;vertical-align: middle;
+    }
+    .product-favorite-card{
+    min-width: 400px;
+    min-height: 200px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    .product-img img{
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: scale-down;
+    
+    }
+    .product-desc{
+    
+    min-height: 200px;
+    min-width: 200px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    
+    }
+    .remove-btn-div{
+    min-width: 150px;
+    max-height: 30px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content:flex-end;
+    }
+    
+    
+    .product-info h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    }
+    
+    .product-info p {
+    margin: 5px 0;
+    color: #555;
+    }
+    #darkOverlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity (0.5 is 50%) */
+    z-index: 3; /* Ensures it’s on top of other elements */
+    pointer-events: none; /* Allows clicks to pass through */
+    }
+    
+    .trash{
+    background-color: white;
+    border-radius: 400px;
+    padding:5px 7px;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid transparent; /* Set initial border to transparent */
+    padding-right: 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    
+    }
+    .trash:hover{
+    
+    transform: scale(1.2);
+    }
+    .product-favorite-card:hover .trash {
+    opacity: 1;
+    visibility: visible;
+    
+    }
+    .add-to-cart-div{
+      width: 100%;
+      min-height: 25px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+     position: absolute;
+     bottom: 0; /* Align the child div to the bottom of the parent */
+     left: 0; /* Optional, align to the left of the parent */
+      
+    }
+    .Cart{
+      background-color: transparent;
+      border-radius: 400px;
+      padding:5px 7px;
+      border: none;
+      opacity: 0;
+      visibility: hidden;
+      border: 1px solid transparent; /* Set initial border to transparent */
+    padding-right: 8px;
+      transition: all 0.3s ease-in-out;
+    }
+    .Cart:hover{
+    
+      transform: scale(1.25);
+    }
+    .product-card:hover .Cart{
+      opacity: 1;
+      visibility: visible;
+     
+    }
+    .product-desc-div{
+     display: block;
+     justify-content: space-between;
+      
+    }
+    
+  
+  
+  
+nav span {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .sidebar,.menu-1{
+  overflow-y: scroll;overflow-x: hidden; -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .mycart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-top: 8px;
+    min-width: 250px;
+  }
+  .mycart-label{
+    font-weight: 550;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+  
+  
+  
+  
+  
+  
+  
+
+.footer-div{
+   
+    margin-top:0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow:row nowrap; 
+    background-color:white;
+    
+  }
+  .first-column,.second-column,.third-column,.fourth-column,.fifth-column{
+    display: flex;
+    flex-flow: column nowrap;
+   margin: 2px;
+   color:black;
+  
+  
+  
+  }
+  
+  .first-column p,.second-column p,.third-column p,.fourth-column p,.fifth-column p{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+  
+   font-size: 14px;
+   margin-bottom: -8px;
+  
+  transition:all 0.3s ease;
+  }
+  .first-column p:hover,.second-column p:hover,.third-column p:hover,.fourth-column p:hover{
+  
+  color: #333;
+  padding-left: 8px;
+  }
+  .first-column b,.second-column b,.third-column b,.fourth-column b,.fifth-column b{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+    font-size: 22px;
+  
+  margin-bottom: 8px;
+  
+   
+  
+  
+  }
+  .social-icons a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .social-icons a:hover{
+    color:#222222c6;
+  }
+  footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 520;
+  }
+  .legal-group{
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 520;
+  
+  }
+  #cookie{
+    padding-right: 10px;
+  
+  
+  }
+  #terms{
+    padding-right: 10px;
+    
+  
+  }
+  #privacy{
+    
+    
+  
+  
+  }
+  .links-buttons:link{
+    color: white;
+  }
+  .links-buttons:visited{
+    color:white;
+  }
+  
+
+.footer-div{
+ 
+    margin-top:0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow:row nowrap; 
+    background-color:whitesmoke;
+    
+    }
+    .first-column,.second-column,.third-column,.fourth-column,.fifth-column{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2px;
+    color:black;
+    
+    
+    
+    }
+    
+    .first-column p,.second-column p,.third-column p,.fourth-column p,.fifth-column p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    
+    font-size: 14px;
+    margin-bottom: -8px;
+    
+    transition:all 0.3s ease;
+    }
+    .first-column p:hover,.second-column p:hover,.third-column p:hover,.fourth-column p:hover{
+    
+    color: #333;
+    padding-left: 8px;
+    }
+    .first-column b,.second-column b,.third-column b,.fourth-column b,.fifth-column b{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    font-size: 22px;
+    
+    margin-bottom: 8px;
+    
+    
+    
+    
+    }
+    
+    
+    .social-icons a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    }
+    
+    
+    .social-icons a:hover{
+    color:#222222c6;
+    }
+    footer{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 520;
+        width: 100%;
+        }
+        .legal-group{
+        background-color: black;
+        color: whitesmoke;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 520;
+        
+        }
+        #cookie{
+        padding-right: 10px;
+        
+        
+        }
+        #terms{
+        padding-right: 10px;
+        
+        
+        }
+        #privacy{
+        
+        
+        
+        
+        }
+        
+        
+
+#membership-text{
+    margin-top: 42px;
+    margin-left: 42px;
+ }
+.membership{
+    margin-top: -18px;
+    height: 150px;
+    background-color: whitesmoke;
+    border:rgba(245, 245, 245, 0.886) solid 1px;
+    Color:black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 32px;
+   font-family: 'Times New Roman';
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Shadow only at the bottom */
+}
+.membership-logos{
+    margin-left:-20px;
+    margin-top: 40px;
+}
+.Create-now-button {
+   margin-left: 40px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+box-shadow:3px 3px #333;
+transition: background-color 0.2s, color 0.3s; /* Smooth transitions */
+
+}
+
+.Create-now-button:hover {
+background-color: black;
+color:white;
+box-shadow: none;
+
+}
+#Kobe-logo{
+    width: 130px;
+    height:70px;
+  
+}
+#Jordan-logo{
+    margin-left:-10px;
+
+}
+
+
+
+#membership-text{
+    margin-top: 42px;
+    margin-left: 42px;
+  }
+  .membership{
+    margin-top: -18px;
+    height: 150px;
+    background-color: white;
+    border-bottom: whitesmoke solid 2px;
+    Color:black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 32px;
+   
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Shadow only at the bottom */
+  }
+  .membership-logos{
+    margin-left:-20px;
+    margin-top: 40px;
+  }
+  .Create-now-button {
+   margin-left: 40px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+  box-shadow:3px 3px #333;
+  transition: background-color 0.2s, color 0.3s; /* Smooth transitions */
+  
+  }
+  
+  .Create-now-button:hover {
+  background-color: black;
+  color:white;
+  box-shadow: none;
+  
+  }
+  #Kobe-logo{
+    width: 130px;
+    height:70px;
+  
+  }
+  #Jordan-logo{
+    margin-left:-10px;
+  
+  }
+
+
+  .options a {
+    margin: 0 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 520;
+    letter-spacing: 2px;
+    color: black;
+  }
+  .top-text {
+    color: white;
+    font-size: 11px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 520;
+    letter-spacing: 2px;
+  }
+  nav {
+    background-color: whitesmoke;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust the max width as needed */
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .logos {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .img-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: scale-down;
+    margin: 0 10px;
+  }
+  
+  #nikelogo {
+    margin-top: 7px;
+  }
+  
+  #adidaslogo {
+    height: 40px;
+    width: 40px;
+    margin-top: 0px;
+  }
+  
+  .options {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  
+  .search-buttons {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .search{
+  --padding:14px;
+  width:max-content;
+  width: fixed;
+  display: flex;
+  align-items: center;
+  padding:var(--padding);
+  border-radius: 18px;
+  background-color: black;
+   height: 5px;
+   transition: box-shadow 0.25s;
+  
+  }
+  .search:focus-within{
+  box-shadow: 0 0 10px rgba(0,0, 0, 0.75) ;
+  
+  }
+  .search-input{
+  font-size: 12px;
+  font-family: 'Lexend',sans-serif;
+  color: #333;
+  margin-left: 2px;
+  background: transparent;
+  border:none;
+  outline: none;
+  width: 150px;
+  
+  }
+  .search-input:focus-within{
+  color :white;
+  }
+  .search-input::placeholder,
+  .search-icon{
+  border:none;
+  color:white;
+  
+  }
+  .nav-button {
+   
+  background-color: black;
+    color:white;
+  border: none;
+  
+  
+  width: 30px;
+  height: 30px;
+    
+    margin-left: 10px;
+    border-radius: 400px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-button:hover { 
+  box-shadow: 0 0 10px rgba(0,0,0,0.75);
+   
+   
+   
+  
+  }
