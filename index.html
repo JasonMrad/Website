@@ -281,7 +281,7 @@
           
       
       
-                <li><a href="/Products/Sports.html">SPORTS</a></li>
+                <li><a href="Products/Sports.html">SPORTS</a></li>
          
             
           
@@ -347,7 +347,7 @@
         </div>
         <div id="div-main">
           <div id="darkOverlay"></div>
-        <video id="myVideo" class="background-video" autoplay muted playsinline>
+        <video id="myVideo" class="background-video" autoplay muted playsinline loop>
             <source id="myVideoSRC" src="clea.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -440,34 +440,8 @@
         
       </footer>
    
-   <script>
-    const videos = ["clea.mp4", "AI.mp4","gibson.mp4"];
-    let currentIndex = 0;
-    const videoPlayer = document.getElementById('myVideo');
-    const videoSource = document.getElementById('myVideoSRC');
+  
 
-    function playVideo(index) {
-        if (index >= videos.length) {
-            index = 0; // Reset index if it exceeds the array length
-        }
-        currentIndex = index;
-        videoSource.src = videos[currentIndex];
-        videoPlayer.load();
-        videoPlayer.play().catch(error => {
-            console.error('Error playing video:', error);
-        });
-        console.log(`Switching to video: ${videos[currentIndex]}`);
-    }
-
-    videoPlayer.addEventListener('ended', () => {
-        console.log('Video ended. Switching video...');
-        currentIndex = (currentIndex + 1) % videos.length;
-        playVideo(currentIndex);
-    });
-
-    // Initialize the first video
-    playVideo(currentIndex);
-</script>
 <script src="Javascript/index.js">
       
 </script>
