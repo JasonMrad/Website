@@ -5,7 +5,9 @@ header {
   justify-content: space-around;
 }
 
-
+.nav-links{
+  color:black;
+}
 
 body, header {
   
