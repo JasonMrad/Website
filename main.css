@@ -9,7 +9,6 @@ header {
 
 
 body, header {
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   margin: 0; /* Ensure no default margin */
   padding: 0; /* Ensure no default padding */
@@ -124,4 +123,21 @@ main {
    color: black;
     
 }
+#mainmenu{
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+#sub-menu{
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        color: white;
+   
+    
+}
+
 
