@@ -12,7 +12,7 @@ if (mediaQuery.matches) {
 }
     // Remove event listeners so it runs only once
     window.removeEventListener('load', updateMetaTag);
-    window.removeEventListener('resize', updateMetaTag);
+  
 }
 
 // Run on page load
