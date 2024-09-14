@@ -18,6 +18,7 @@ body, header {
 
 }
 
+
 a:link {
     text-decoration: none;
     color: white;
@@ -415,4 +416,24 @@ input[type="password"] {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 943px) {
+  html{
+    width: 1216.9px;
+    color: black;
+  }
+  body{
+    width: 1216.9px;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    height: 100%;
+    
+  
+  }
+  main{
+    width: 1216.9px;
+    height: 966px;
+  }
+
+}
+
 
