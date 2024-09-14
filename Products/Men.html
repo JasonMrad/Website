@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.34">
     <title>Document</title>
     <link rel="stylesheet" href="Products.css">
     
@@ -823,27 +823,7 @@
 
 
       <script src="../Javascript/sidebar.js"></script>
-      <script>
-        function updateMetaTag() {
-      const metaDescription = document.querySelector('meta[name="viewport"]');
-      const mediaQuery = window.matchMedia("(max-width: 943px)");
-  
-      if (mediaQuery.matches) {
-          
-          metaDescription.setAttribute("content", "width=device-width, initial-scale=0.34");
-      } else {
-         
-          metaDescription.setAttribute("content", "width=device-width, initial-scale=1");
-      }
-  }
-  
-  // Run on page load
-  window.addEventListener('load', updateMetaTag);
-  
-  // Run on window resize
-  window.addEventListener('resize', updateMetaTag);
-  
-      </script>
+   
       <script src="../Javascript/index.js"></script>
       
 </body>
