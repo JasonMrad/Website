@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Products.css">
+    
+    <link rel="stylesheet" href="../CSS/dropdown.css">
+    <link rel="stylesheet" href="../CSS/footer-white.css">
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/favorites.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,121 +22,331 @@
         <p class="top-text"><a class="top-link" href="../Policies/returns.html">30 DAY FREE RETURNS</a></p>
     </header>
     <nav>
-        <a href="../Main/main-page.html">
-            <div class="logos">
-                
-                <img src="icons8-adidas-trefoil-64.png" class="img-logo" id="adidaslogo">
-                <img src="nike-logo-49337.png" class="img-logo" id="nikelogo"> 
-            </div></a>
-        <div class="nav-container" >
-           
-            <div class="options" id="options">
-                <div class="dropdown" id="dropdown">
+        <a href="../Main/main-page.html">      <div class="logos">
+                  <img src="icons8-adidas-trefoil-64.png" class="img-logo" id="adidaslogo">
+                  <img src="nike-logo-49337.png" class="img-logo" id="nikelogo"> 
+              </div></a>
+              <div class="nav-container">
                   
-                    <ul class="menu">
-                       
-                      <li><a href="../Products/Men.html"><b>MEN</b></a>
-                    <ul class="submenu">
-                      <div class="test">  <li ><a style="width: 100px;">Collection</a></li></div> 
-                      <div class="test">  <li><a>Shirts</a></li></div> 
-                      <div class="test">  <li><a>Pants</a></li></div>
-                       <div class="test"> <li><a>Shoes</a></li></div>
-                          </ul></li>
-               
-                  
-                  
-                       
-                          <li><a href="../Products/Female.html"><b>WOMEN</b></a>
-                          <ul class="submenu">
-                            <div class="test">  <li><a>Tops</a></li></div> 
-                            <div class="test">  <li><a>Pants</a></li></div> 
-                            <div class="test">  <li><a>Shorts</a></li></div>
-                             <div class="test"> <li><a>Shoes</a></li></div>
-                          </ul>
-                        </li>
-                    
-                
+                <div class="options" id="options">
+          <div class="dropdown">
             
-                  
-                  
-                    
-                      <li><a href="../Products/kids.html"><b>KIDS</b></a>
-                        <ul class="submenu">
-                          <div class="test">  <li ><a style="width: 100px;">Collection</a></li></div> 
-                          <div class="test">  <li><a>Boy</a></li></div> 
-                          <div class="test">  <li><a>Girl</a></li></div>
-                           <div class="test"> <li><a>Shoes</a></li></div>
-                              </ul></li>
-                      
-                    
-                
-            
-            
-                      <li><a href="../Products/Sports.html">SPORTS</a></li>
-               
-                  
-                
-                 <li style="width: 167px;"><a >3 STRIDE LIFE</a></li>
-               
-                  
-                
-            
-            
-                
-                 <li><a>OUTLET</a></li>
-            </ul>
-            </div>
-                      </div>
-
-<div class="search-buttons">
-    <form>
-      <div class="search">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-          <input class="search-input" type="search" placeholder="Search">
-
-      </div>
-    </form>
-       
-      
-      <button class="nav-button" aria-label="User"><i class="fa-regular fa-user fa-small-icon" ></i></button>
-      <button class="nav-button" aria-label="Favorites" onclick="checked()"><i class="fa-regular fa-heart"></i></button>
-      <button class="nav-button" aria-label="Shopping Cart"><i class="fa fa-shopping-cart fa-sm" aria-hidden="true" ></i></button>
-
-      <input id="menu1Toggle" type="checkbox">
-      <div class="page-wrapper">
-        <div class="page-content">
-      
-          
-        </div>
-        <div class="sidebar menu-1" style="overflow-y: scroll;overflow-x: hidden; -ms-overflow-style: none;
-          scrollbar-width: none;">
-          
-          <div class="favorite-header" style="display: flex;justify-content: space-between;align-items:center;padding-top: 8px;min-width: 250px;"> 
-          <div class="favorite-label" style="font-weight: 550;padding-left: 10px;font-size: 18px;">
-            Favorites
-          </div>
+              <ul class="menu">
+                 
+                <li><a href="../Products/Men.html"><b>MEN</b></a>
+              <ul class="submenu">
+                <div class="dropdown-content">
+  <div class="categories-div" style="margin-left: 120px;">
+    <div class="drop-header">
+    <p class="header-link">
+    CLOTHING
+  </p>
+    </div>
+    <div class="drop-body">
+   <a href="google.com" style="display: block;margin:0;padding:0;font-size: 13px;"><p class="drop-body-p" style="width: 60px;">T-Shirts</p></a>
+    <p class="drop-body-p">Pants</p>
+    <p class="drop-body-p">Hoodies</p>
+    <p class="drop-body-p">Shorts</p>
+  
     
-
-          <label class="menu-toggle menu-1-toggle" for="menu1Toggle" style="padding-top:6px;    
-      " onclick="uncheck()"><span class="close-label"><i class="fa fa-times fa-sm" aria-hidden="true" onclick="uncheck()"></i></span></label>
-      </div>
-      <div class="spacing-favorite" style="min-height: 10px;min-width: 400px;">
-      
-      </div>
-      <div id="favorites-container" class="favorites-container">
-        <div id="no-favorites-message" style="display: flex;justify-content: center;text-align: center;vertical-align: middle;">No items favored</div>
-
-
-          </div>
-          </div>
-          
+  
+    </div>
+  
+  </div>
+  <div class="categories-div">
+    <div class="drop-header">
+    <p class="header-link">
+    FOOTWEAR  
+  </p>
+    </div>
+    <div class="drop-body">
+    <p class="drop-body-p">Sneakers</p>
+    <p class="drop-body-p">Classic</p>
+    <p class="drop-body-p">Slippers</p>
+    <p class="drop-body-p">Sandals</p>
+  
+    
+  
+    </div>
+  
+  </div>
+  <div class="categories-div">
+    <div class="drop-header">
+    <p class="header-link">
+   SPORTSWEAR
+  </p>
+    </div>
+    <div class="drop-body">
+    <p class="drop-body-p" style="width: 97px;">Running Shoes</p>
+    <p class="drop-body-p">Gym</p>
+    <p class="drop-body-p">Performance</p>
+    <p class="drop-body-p">Compression</p>
+  
+    
+  
+    </div>
+  
+  </div>
+  <div class="categories-div">
+    <div class="drop-header">
+    <p class="header-link">
+  ACCESSORIES
+  </p
+  >
+    </div>
+    <div class="drop-body">
+    <p class="drop-body-p">Belts</p>
+    <p class="drop-body-p">Hats</p>
+    <p class="drop-body-p">Sunglasses</p>
+    <p class="drop-body-p">Watches</p>
+  
+    
+  
+    </div>
+  
+  </div>
+  
+                </div>
+                   </ul></li>
          
             
+            
+                 
+                    <li><a href="../Products/Female.html"><b>WOMEN</b></a>
+                      <ul class="submenu">
+               
+                        <div class="dropdown-content">
+          <div class="categories-div" style="margin-left: 120px;">
+            <div class="drop-header">
+            <p class="header-link">
+            CLOTHING
+          </p
+          >
+            </div>
+            <div class="drop-body">
+            <p class="drop-body-p">Tops</p>
+            <p class="drop-body-p">Pants</p>
+            <p class="drop-body-p">Skirts</p>
+            <p class="drop-body-p">Hoodies</p>
+          
+            
+          
+            </div>
+          
+          </div>
+          <div class="categories-div">
+            <div class="drop-header" >
+            <p class="header-link">
+            FOOTWEAR  
+          </p
+          >
+            </div>
+            <div class="drop-body">
+            <p class="drop-body-p">Sneakers</p>
+            <p class="drop-body-p">Flats</p>
+            <p class="drop-body-p">Classic</p>
+            <p class="drop-body-p">Sandals</p>
+          
+            
+          
+            </div>
+          
+          </div>
+          <div class="categories-div">
+            <div class="drop-header">
+            <p class="header-link">
+           ACTIVEWEAR
+          </p>
+            </div>
+            <div class="drop-body">
+            <p class="drop-body-p" style="width: 72px;">Yoga Pants</p>
+            <p class="drop-body-p" style="width: 76px;" >Sports Bras</p>
+            <p class="drop-body-p"  style="width: 89px;">Athletic Tops</p>
+            <p class="drop-body-p"  style="width: 96px;">Running Shoes</p>
+          
+            
+          
+            </div>
+          
+          </div>
+          <div class="categories-div">
+            <div class="drop-header" >
+            <p class="header-link">
+          ACCESSORIES
+          </p
+          >
+            </div>
+            <div class="drop-body">
+            <p class="drop-body-p">Handbags</p>
+            <p class="drop-body-p">Hats</p>
+            <p class="drop-body-p">Sunglasses</p>
+            <p class="drop-body-p">Watches</p>
+          
+            
+          
+            </div>
+          
+          </div>
+          
+                        </div>
+                           </ul></li>
+              
+          
+      
+            
+            
+              
+                <li><a href="../Products/kids.html"><b>KIDS</b></a>
+                  <ul class="submenu">
+               
+                    <div class="dropdown-content">
+      <div class="categories-div" style="margin-left: 120px;">
+        <div class="drop-header">
+        <p class="header-link">
+        CLOTHING
+      </p
+      >
+        </div>
+        <div class="drop-body">
+        <p class="drop-body-p" style="width: 52px;">T-Shirts</p>
+        <p class="drop-body-p">Pants</p>
+        <p class="drop-body-p">Hoodies</p>
+        <p class="drop-body-p">Shorts</p>
+      
         
-        </nav>
+      
+        </div>
+      
+      </div>
+      <div class="categories-div">
+        <div class="drop-header">
+        <p class="header-link">
+        FOOTWEAR  
+      </p
+      >
+        </div>
+        <div class="drop-body">
+        <p class="drop-body-p">Sneakers</p>
+        <p class="drop-body-p">Classic</p>
+        <p class="drop-body-p">Slippers</p>
+        <p class="drop-body-p">Sandals</p>
+      
+        
+      
+        </div>
+      
+      </div>
+      <div class="categories-div">
+        <div class="drop-header">
+        <p class="header-link">
+       SPORTSWEAR
+      </p
+      >
+        </div>
+        <div class="drop-body">
+        <p class="drop-body-p" style="width: 97px;">Running Shoes</p>
+        
+        <p class="drop-body-p">Athletic</p>
+        <p class="drop-body-p">Activewear</p>
+      <p class="drop-body-p"></p>
+        
+      
+        </div>
+      
+      </div>
+      <div class="categories-div">
+        <div class="drop-header">
+        <p class="header-link">
+      ACCESSORIES
+      </p
+      >
+        </div>
+        <div class="drop-body">
+        <p class="drop-body-p">Belts</p>
+        <p class="drop-body-p">Hats</p>
+        <p class="drop-body-p">Sunglasses</p>
+        <p class="drop-body-p">Watches</p>
+      
+        
+      
+        </div>
+      
+      </div>
+      
+                    </div>
+                       </ul></li>
+                
+              
+          
+      
+      
+                <li><a href="../Products/Sports.html">SPORTS</a></li>
+         
+            
+          
+           <li style="width: 167px;"><a >3 STRIDE LIFE</a></li>
+         
+            
+          
+      
+      
+          
+           <li><a>OUTLET</a></li>
+      </ul>
+      </div>
+                </div>
+  
+            <div class="search-buttons">
+              <form>
+                <div class="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                    <input class="search-input" type="search" placeholder="Search" >
+  
+                </div>
+              </form>
+                 
+                
+              <button class="nav-button" aria-label="User"><i class="fa-regular fa-user fa-small-icon" ></i></button>
+              <button class="nav-button" aria-label="Favorites" onclick="checked()"><i class="fa-regular fa-heart"></i></button>
+              <button class="nav-button" aria-label="Shopping Cart"><i class="fa fa-shopping-cart fa-sm" aria-hidden="true" ></i></button>
+        
+              <input id="menu1Toggle" type="checkbox">
+              <div class="page-wrapper">
+                <div class="page-content">
+              
+                  
+                </div>
+                <div class="sidebar menu-1">
+                  
+                  <div class="mycart-header"> 
+                  <div class="mycart-label">
+                    Favorites
+                  </div>
+        
+                  <label class="menu-toggle menu-1-toggle" for="menu1Toggle" style="padding-top:6px;    
+              " onclick="uncheck()"><span class="close-label"><i class="fa fa-times fa-sm" aria-hidden="true" onclick="uncheck()"></i></span></label>
+              </div>
+              <div class="spacing-favorite" style="min-height: 10px;min-width: 400px;">
+              
+              </div>
+              <div id="favorites-container" class="favorites-container">
+                <div id="no-favorites-message">No items favored</div>
+        
+        
+                  </div>
+                  </div>
+                  
+                 
+                    
+                
+                </nav>
 
-    <div id="div-main">
-        <div id="darkOverlay"></div>
+                <main>
+                    <div id="darkOverlay-dropdown">
+                      
+                    </div>
+                    <div id="div-main">
+                      <div id="darkOverlay"></div>
         <div class="membership">
             <div id="membership-text">
               <b>BECOME A MEMBER  & GET<a href="../Account/createAccount.html" id="create-account"> <button class="Create-now-button">CREATE ACCOUNT</button> </a><br>  25% OFF</b>  
@@ -542,7 +757,7 @@
         </div>
     </div>
 </div>
-    
+    </main>
     <div class="footer-div">
         <div class="first-column">
             <b>PRODUCTS</b>
@@ -589,12 +804,12 @@
         </div>
       </div>
       <footer style="display: flex;justify-content: space-between;background-color: black;align-items: center;">
-        <div class="info-group" style="min-width: 550px;display: flex;justify-content: flex-start;color: whitesmoke;align-items: center;">
+        <div class="info-group" style="display: flex;justify-content: flex-start;color: whitesmoke;align-items: center;">
           <div class="tel-group" style="padding-left:40px ;">
     <p> Tel: +961 71 476 193</p>
     </div>
         </div>
-        <div class="legal-group" style="min-width: 550px;">
+        <div class="legal-group">
     <div id="cookie">
       <p><a href="../Policies/cookies.html">Cookie settings |</p></a></div>
       <div id="terms">
@@ -605,170 +820,31 @@
     </div>
         
       </footer>
-  
-       <script>
-        function checked(){
-        let page=document.getElementById("darkOverlay");
-          let checkbox=document.getElementById("menu1Toggle");
-          let body=document.body;
-          let main=document.getElementById("div-main");
-          let opt=document.getElementById("options");
-          checkbox.checked=true;
-          page.style.visibility="visible";
-          body.style.overflowY="hidden";
-          main.style.overflowY="hidden";
-          main.style.pointerEvents="none";
-          opt.style.pointerEvents="none";
 
-  
-        }
-        function uncheck(){
-        let page=document.getElementById("darkOverlay");
-        let body=document.body;
-        let main=document.getElementById("div-main");
-        let opt=document.getElementById("options");
-        body.style.overflowY="scroll";
-        page.style.visibility="hidden";
-        main.style.overflowY="visible";
-        main.style.pointerEvents="all";
-        opt.style.pointerEvents="all";
 
-  
-        }
-      </script>
+      <script src="../Javascript/sidebar.js"></script>
       <script>
-function updateNoFavoritesMessage() {
-    const noFavoritesMessage = document.getElementById('no-favorites-message');
-
-    if (document.getElementsByClassName("product-favorite-card").length === 0) {
-        noFavoritesMessage.style.display = 'flex'; // Show message if no favorites
-    } else {
-        noFavoritesMessage.style.display = 'none'; // Hide message if there are favorites
-    }
-}
-
-// Function to handle toggling product in favorites
-function toggleFavorite(productElement) {
-    const favoritesContainer = document.getElementById('favorites-container');
-    const img = productElement.querySelector('img');
-
-    if (!img) {
-        console.error('Image element not found in productElement');
-        return;
-    }
-
-    const productImgSrc = img.getAttribute('src');
-
-    // Check if the product is already in the favorites container
-    const favoriteProduct = Array.from(favoritesContainer.children).find(child =>
-        child.querySelector('img') && child.querySelector('img').getAttribute('src') === productImgSrc
-    );
-
-    if (favoriteProduct) {
-        // If the product is already in favorites, remove it
-        removeFavorite(favoriteProduct);
-    } else {
-        // Otherwise, add it to favorites
-        addToFavorites(productElement);
-    }
-
-    // Update the no favorites message visibility
-    updateNoFavoritesMessage();
-}
-
-// Function to handle adding product to favorites
-function addToFavorites(productElement) {
-    const prod = productElement.querySelector('button');
-    if (prod) {
-        prod.style.color = "black";
-    } else {
-        console.error('Button element not found in productElement');
-    }
-
-    // Clone the product element
-    const favoriteProduct = productElement.cloneNode(true);
-    
-    // Update the class name
-    favoriteProduct.classList.remove('product-card');
-    favoriteProduct.classList.add('product-favorite-card');
-    
-    // Get the image and description elements
-    const img = favoriteProduct.querySelector('img');
-    img.style.maxHeight = '200px';
-    img.style.maxWidth = '200px';
-
-    const desc = favoriteProduct.querySelector('.product-info');
-    desc.style.maxHeight = '200px';
-    desc.style.maxWidth = '200px';
-
-    // Remove the favorite button
-    const button = favoriteProduct.querySelector('.favorite-btn');
-    if (button) {
-        button.remove(); // This removes the favorite button from the cloned element
-    }
-const cartBut=favoriteProduct.querySelector(".add-to-cart-div");
-cartBut.remove();
-    // Create a new div with class 'product-desc'
-    const productDesc = document.createElement('div');
-    productDesc.classList.add('product-desc');
-
-    // Create a new div to replace the favorite button
-    const removeBtnDiv = document.createElement('div');
-    removeBtnDiv.classList.add('remove-btn-div');
-
-    // Create the trash button
-    const trashButton = document.createElement('button');
-    trashButton.classList.add('trash');
-    trashButton.innerHTML = '<i class="fa-solid fa-trash"></i>'; // Add the trash icon
-
-    // Append the trash button to the new div
-    removeBtnDiv.appendChild(trashButton);
-
-    // Append the img and desc to the product-desc div
-    productDesc.appendChild(desc);
-    productDesc.appendChild(removeBtnDiv);
-
-    favoriteProduct.appendChild(img);
-    favoriteProduct.appendChild(productDesc);
-
-    // Append the favorite product to the favorites container
-    document.getElementById('favorites-container').appendChild(favoriteProduct);
-    
-    // Add event listener to the trash button
-    trashButton.addEventListener('click', function() {
-        removeFavorite(favoriteProduct);
-    });
-}
-
-// Function to handle removing product from favorites
-function removeFavorite(favoriteProduct) {
-    const imgSrc = favoriteProduct.querySelector('img') ? favoriteProduct.querySelector('img').getAttribute('src') : '';
-    const originalProduct = imgSrc ? document.querySelector(`.product-card img[src="${imgSrc}"]`).closest('.product-card') : null;
-
-    if (originalProduct) {
-        const heartButton = originalProduct.querySelector('.favorite-btn');
-        if (heartButton) {
-            heartButton.style.color = 'white'; // Reset color to white
-        }
-    }
-
-    // Remove the product from the favorites container
-    favoriteProduct.remove();
-
-    // Update the no favorites message visibility
-    updateNoFavoritesMessage();
-}
-
-// Event listener for toggling products in favorites
-document.querySelectorAll('.favorite-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const productElement = this.closest('.product-card');
-        toggleFavorite(productElement);
-    });
-});
-
-
+        function updateMetaTag() {
+      const metaDescription = document.querySelector('meta[name="viewport"]');
+      const mediaQuery = window.matchMedia("(max-width: 943px)");
+  
+      if (mediaQuery.matches) {
+          
+          metaDescription.setAttribute("content", "width=device-width, initial-scale=0.34");
+      } else {
+         
+          metaDescription.setAttribute("content", "width=device-width, initial-scale=1");
+      }
+  }
+  
+  // Run on page load
+  window.addEventListener('load', updateMetaTag);
+  
+  // Run on window resize
+  window.addEventListener('resize', updateMetaTag);
+  
       </script>
+      <script src="../Javascript/index.js"></script>
       
 </body>
 </html>
