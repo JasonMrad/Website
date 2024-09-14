@@ -10,6 +10,9 @@ if (mediaQuery.matches) {
  
   metaDescription.setAttribute("content", "width=device-width, initial-scale=1");
 }
+    // Remove event listeners so it runs only once
+    window.removeEventListener('load', updateMetaTag);
+    window.removeEventListener('resize', updateMetaTag);
 }
 
 // Run on page load
