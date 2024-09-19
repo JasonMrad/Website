@@ -1,5 +1,5 @@
 .footer-div{
- 
+ overflow-y: hidden;
     margin-top:0px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -7,7 +7,6 @@
     justify-content: space-around;
     flex-flow:row nowrap; 
     background-color:whitesmoke;
-  overflow-x:hidden;
     
     }
     .first-column,.second-column,.third-column,.fourth-column,.fifth-column{
@@ -62,6 +61,8 @@
         font-size: 13px;
         font-weight: 520;
         width: 100%;
+        overflow-y: hidden;
+        display: flex;justify-content: space-between;background-color: black;align-items: center;
         }
         .legal-group{
         background-color: black;
@@ -92,4 +93,7 @@
         
         }
         
+        .mobile-footer{
+            display: none;
+        }
         
