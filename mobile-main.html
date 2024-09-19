@@ -393,12 +393,15 @@ window.onload=toggleButtonDropDown_Footer('aboutUs', 'aboutUsChevron')
       window.location.href = "index.html"; // Replace with the desktop version URL
     }
 
-    // Optional: Handle resizing to redirect back when the screen size increases
-    window.addEventListener('resize', function() {
-      if (window.innerWidth >= 900) {
-        window.location.href = "index.html"; // Replace with the desktop version URL
-      }
-    });
+  let redirected = false;
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 900 && !redirected) {
+        window.location.href = 'index.html';
+        redirected = true;
+    }
+});
+
   </script>
 
 
