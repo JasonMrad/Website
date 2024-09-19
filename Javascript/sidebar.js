@@ -127,10 +127,10 @@ document.querySelectorAll('.favorite-btn').forEach(button => {
         toggleFavorite(productElement);
     });
 });
-function checked(){
-    console.log("hello");
+function checked(checker){
+    
   let page=document.getElementById("darkOverlay");
-    let checkbox=document.getElementById("menu1Toggle");
+    let checkbox=document.getElementById(checker);
     let body=document.body;
     let main=document.getElementById("div-main");
     let opt=document.getElementById("options");
