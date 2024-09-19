@@ -385,26 +385,21 @@ function toggleButtonDropDown_Footer(dropDownList, chevron){
 }
 window.onload=toggleButtonDropDown_Footer('aboutUs', 'aboutUsChevron')
 </script>
-<script src="../Javascript/marquee.js"></script>
+<script src="Javascript/marquee.js"></script>
 
-<script>
-  // Function to check screen size and redirect accordingly
-  function checkScreenWidth() {
-    // Get the current screen width
-    const screenWidth = window.innerWidth;
-
-    // Get the current page's file name
-    const currentPage = window.location.pathname;
-
-    // Redirect to main page if screen width is greater than 800px and the current page is mobile-main.html
-    if (screenWidth > 800 && currentPage.includes("mobile-main.html")) {
-      window.location.href = "index.html";
+ <script>
+    // JavaScript to check if the width is above 900px and redirect back to the desktop page
+    if (window.innerWidth >= 900) {
+      window.location.href = "index.html"; // Replace with the desktop version URL
     }
-  }
 
-  // Check screen size when the page loads and when the window is resized
-  window.onload = checkScreenWidth;
-</script>
+    // Optional: Handle resizing to redirect back when the screen size increases
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 900) {
+        window.location.href = "index.html"; // Replace with the desktop version URL
+      }
+    });
+  </script>
 
 
 
