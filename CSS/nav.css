@@ -136,3 +136,40 @@
    
   
   }
+  .slick-container{
+    display: none;
+  }
+  .mobile-nav{
+    display: none;
+  }
+  @media (max-width: 950px) {
+    .search{
+      --padding:14px;
+      
+    
+    
+      display: flex;
+      align-items: center;
+   border: none;
+      background-color: whitesmoke;
+       
+       transition: box-shadow 0.25s;
+      
+      }
+      .nav-button {
+   
+        background-color: whitesmoke;
+          color:black;
+        border: none;
+        
+        
+        width: 30px;
+        height: 30px;
+          
+          margin-left: 10px;
+         
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        
+  }
