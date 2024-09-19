@@ -19,12 +19,13 @@
       <script>
   // Function to check screen size and redirect accordingly
   function checkScreenWidth() {
+      
     // Get the current screen width
     const screenWidth = window.innerWidth;
 
     // Get the current page's file name
     const currentPage = window.location.pathname;
-
+console.log(screenWidth+" "+currentPage);
     // Redirect to mobile page if screen width is less than 800px and the current page is main-page.html
     if (screenWidth < 800 && !currentPage.includes("mobile-main.html")) {
       window.location.href = "mobile-main.html";
