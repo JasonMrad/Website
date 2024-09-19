@@ -16,27 +16,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
    
 </head>
-      <script>
-  // Function to check screen size and redirect accordingly
-  function checkScreenWidth() {
-      
-    // Get the current screen width
-    const screenWidth = window.innerWidth;
-
-    // Get the current page's file name
-    const currentPage = window.location.pathname;
-console.log(screenWidth+" "+currentPage);
-    // Redirect to mobile page if screen width is less than 800px and the current page is main-page.html
-    if (screenWidth < 800 && !currentPage.includes("mobile-main.html")) {
-      window.location.href = "https://github.com./JasonMrad/website/mobile-main.html";
-    }
-  }
-
-  // Check screen size when the page loads and when the window is resized
-  window.onload = checkScreenWidth;
-window.resize=checkScreenWidth;
-</script>
-         
 <body>
     <header id="top">
         <p class="top-text"><a class="top-link" href="Policies/cash-on-delivery.html">CASH ON DELIVERY</a></p>  
@@ -55,7 +34,7 @@ window.resize=checkScreenWidth;
             
               <ul class="menu">
                  
-                <li><a href="Products/Men.html"><b>MEN</b></a>
+                <li><a href="../Products/Men.html"><b>MEN</b></a>
               <ul class="submenu">
                 <div class="dropdown-content">
   <div class="categories-div" style="margin-left: 120px;">
@@ -134,7 +113,7 @@ window.resize=checkScreenWidth;
             
             
                  
-                    <li><a href="Products/Female.html"><b>WOMEN</b></a>
+                    <li><a href="../Products/Female.html"><b>WOMEN</b></a>
                       <ul class="submenu">
                
                         <div class="dropdown-content">
@@ -218,7 +197,7 @@ window.resize=checkScreenWidth;
             
             
               
-                <li><a href="/Products/kids.html"><b>KIDS</b></a>
+                <li><a href="../Products/kids.html"><b>KIDS</b></a>
                   <ul class="submenu">
                
                     <div class="dropdown-content">
@@ -302,7 +281,7 @@ window.resize=checkScreenWidth;
           
       
       
-                <li><a href="Products/Sports.html">SPORTS</a></li>
+                <li><a href="../Products/Sports.html">SPORTS</a></li>
          
             
           
@@ -368,8 +347,8 @@ window.resize=checkScreenWidth;
         </div>
         <div id="div-main">
           <div id="darkOverlay"></div>
-        <video id="myVideo" class="background-video" autoplay muted playsinline loop>
-            <source id="myVideoSRC" src="clea (1) (1).mp4" type="video/mp4">
+        <video id="myVideo" class="background-video" autoplay muted playsinline>
+            <source id="myVideoSRC" src="clea.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -388,8 +367,7 @@ window.resize=checkScreenWidth;
         <div class="membership" style="margin-top:0;">
                 <div id="membership-text">
                   <b>BECOME A MEMBER  & GET
-                      <!--./Account/createAccount.html-->
-                    <a href="./Account/createAccount.html"><button class="Create-now-button">CREATE ACCOUNT</button>  </a><br>  25% OFF</b> 
+                    <a href="../Account/createAccount.html"><button class="Create-now-button">CREATE ACCOUNT</button>  </a><br>  25% OFF</b> 
                 </div>
                 <div class="membership-logos">
                     <img src="Kobe_Bryant-Logo-PNG3 (1).png" alt="Not Found" id="Kobe-logo">
@@ -449,23 +427,20 @@ window.resize=checkScreenWidth;
     <p> Tel: +961 71 476 193</p>
     </div>
         </div>
-        <div class="legal-group">
+        <div class="legal-group" style="">
     <div id="cookie">
-      <p><a href="/Policies/cookies.html">Cookie settings |</p></a></div>
+      <p><a href="Policies/cookies.html">Cookie settings |</p></a></div>
       <div id="terms">
-     <a href="/Policies/terms&conditions.html" class="links-buttons"> <p> Terms and conditions |</p></div></a>
+     <a href="Policies/terms&conditions.html" class="links-buttons"> <p> Terms and conditions |</p></div></a>
       <div id="privacy">
-     <a href="/Policies/privacy-policy.html" class="links-buttons"> <p> Privacy policy</p></div></a>
+     <a href="Policies/privacy-policy.html" class="links-buttons"> <p> Privacy policy</p></div></a>
     </div>
     </div>
         
       </footer>
    
-    
-
-
    <script>
-    const videos = ["clea (1)(1).mp4", "AI.mp4","gibson.mp4"];
+    const videos = ["clea.mp4", "AI.mp4","gibson.mp4"];
     let currentIndex = 0;
     const videoPlayer = document.getElementById('myVideo');
     const videoSource = document.getElementById('myVideoSRC');
@@ -499,7 +474,26 @@ window.resize=checkScreenWidth;
       
 </script>
 
-     
+<script>
+  // Function to check screen size and redirect accordingly
+  function checkScreenWidth() {
+    // Get the current screen width
+    const screenWidth = window.innerWidth;
+
+    // Get the current page's file name
+    const currentPage = window.location.pathname;
+
+    // Redirect to mobile page if screen width is less than 800px and the current page is main-page.html
+    if (screenWidth < 800 && currentPage.includes("main-page.html")) {
+      window.location.href = "mobile-main.html";
+    }
+  }
+
+  // Check screen size when the page loads and when the window is resized
+  window.onload = checkScreenWidth;
+  window.onresize = checkScreenWidth;
+</script>
+
 </body>
 
 
