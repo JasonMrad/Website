@@ -1,4 +1,4 @@
-@media (max-width: 780px) {
+@media (max-width: 950px) {
 
     .img-logo {
         width: 47px;
@@ -19,8 +19,12 @@
         width: 35px;
         margin-top: 5px;
       }
+      #top{
+        display:none;
+      }
                 /* Container for slick slider */
                 .slick-container {
+                  display: block;
                 background-color: #000; /* Background color of the container */
                 color: #fff; /* Text color */
                 padding-bottom:0px; /* Padding around the marquee */
@@ -29,6 +33,7 @@
                 height: 40px;
               
             }
+          
     
             /* Style for slick slides */
             .slick-slide a {
@@ -51,6 +56,12 @@
             .slick-track {
                 display: flex; /* Flexbox for alignment */
                 height: 40px;
+            }
+            .desktop-nav{
+              display: none;
+            }
+            .mobile-nav{
+              display: flex;
             }
             nav{
                 display: flex;
@@ -83,6 +94,14 @@
             #shopping-cart-button{
                 transform: scale(1.5);
 
+            }
+            .desktop-footer{
+              display: none;
+
+            }
+            
+            .mobile-footer{
+              display: block;
             }
             .footer-main-container{
    
@@ -204,6 +223,12 @@ font-size: 14px;
               }
               .legal-group{
                 padding-right: 20px;
+              }
+              .desktop-membership{
+                display: none;
+              }
+              .mobile-membership{
+                display:flex;
               }
               .membership{
                 z-index: 2; position: relative; width: 100%; display: flex; justify-content: flex-start;     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
