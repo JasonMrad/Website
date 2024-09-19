@@ -325,6 +325,9 @@ color:#555;
    color: black;
     
 }
+    body{    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
 #mainmenu{
     font-family: 'Arial Black', Gadget, sans-serif;
     font-size: 36px;
