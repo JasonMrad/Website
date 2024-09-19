@@ -16,6 +16,26 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
    
 </head>
+      <script>
+  // Function to check screen size and redirect accordingly
+  function checkScreenWidth() {
+    // Get the current screen width
+    const screenWidth = window.innerWidth;
+
+    // Get the current page's file name
+    const currentPage = window.location.pathname;
+
+    // Redirect to mobile page if screen width is less than 800px and the current page is main-page.html
+    if (screenWidth < 800 && !currentPage.includes("mobile-main.html")) {
+      window.location.href = "mobile-main.html";
+    }
+  }
+
+  // Check screen size when the page loads and when the window is resized
+  window.onload = checkScreenWidth;
+  window.onresize = checkScreenWidth;
+</script>
+         
 <body>
     <header id="top">
         <p class="top-text"><a class="top-link" href="Policies/cash-on-delivery.html">CASH ON DELIVERY</a></p>  
@@ -440,26 +460,7 @@
         
       </footer>
    
-  <script>
-  // Function to check screen size and redirect accordingly
-  function checkScreenWidth() {
-    // Get the current screen width
-    const screenWidth = window.innerWidth;
-
-    // Get the current page's file name
-    const currentPage = window.location.pathname;
-
-    // Redirect to mobile page if screen width is less than 800px and the current page is main-page.html
-    if (screenWidth < 800 && currentPage.includes("index.html")) {
-      window.location.href = "mobile-main.html";
-    }
-  }
-
-  // Check screen size when the page loads and when the window is resized
-  window.onload = checkScreenWidth;
-  window.onresize = checkScreenWidth;
-</script>
-             
+    
 
 <script src="Javascript/index.js">
       
