@@ -448,7 +448,42 @@
 <script src="sidebar.js">
       
 </script>
-                  <script>
+   <script>
+    const videos = ["clea.mp4", "AI.mp4","gibson.mp4"];
+    let currentIndex = 0;
+    const videoPlayer = document.getElementById('myVideo');
+    const videoSource = document.getElementById('myVideoSRC');
+
+    function playVideo(index) {
+        if (index >= videos.length) {
+            index = 0; // Reset index if it exceeds the array length
+        }
+        currentIndex = index;
+        videoSource.src = videos[currentIndex];
+        videoPlayer.load();
+        videoPlayer.play().catch(error => {
+            console.error('Error playing video:', error);
+        });
+        console.log(`Switching to video: ${videos[currentIndex]}`);
+    }
+
+    videoPlayer.addEventListener('ended', () => {
+        console.log('Video ended. Switching video...');
+        currentIndex = (currentIndex + 1) % videos.length;
+        playVideo(currentIndex);
+    });
+
+    // Initialize the first video
+    playVideo(currentIndex);
+</script>
+<script src="../Javascript/index.js">
+      
+</script>
+<script src="../Javascript/sidebar.js">
+      
+</script>
+
+<script>
   // Function to check screen size and redirect accordingly
   function checkScreenWidth() {
     // Get the current screen width
@@ -458,7 +493,7 @@
     const currentPage = window.location.pathname;
 
     // Redirect to mobile page if screen width is less than 800px and the current page is main-page.html
-    if (screenWidth < 800 && currentPage.includes("main-page.html")) {
+    if (screenWidth < 800 && currentPage.includes("index.html")) {
       window.location.href = "mobile-main.html";
     }
   }
@@ -467,6 +502,7 @@
   window.onload = checkScreenWidth;
   window.onresize = checkScreenWidth;
 </script>
+                  
 </body>
 
 
