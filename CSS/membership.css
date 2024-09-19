@@ -46,11 +46,14 @@
   
   }
   #Kobe-logo{
-    width: 130px;
-    height:70px;
+    width: 70px;
+    height:68px;
   
   }
   #Jordan-logo{
     margin-left:-10px;
   
+  }
+  .mobile-membership{
+    display: none;
   }
