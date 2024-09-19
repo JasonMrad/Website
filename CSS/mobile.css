@@ -289,6 +289,58 @@ color:#555;
     display: none; /* Hide the clear button */
 }
 
+    .shop-now-button {
+   
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: black;
+        background-color: white;
+        padding: 10px 20px;
+        border: 2px solid black;
+        text-transform: uppercase;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s ease;
+}
+    
+    
+#shop-now-link{
+    color: black;
+}
+
+.shop-now-button:hover {
+  background-color: whitesmoke;
+}
+.shop-now-button a:link{
+    text-decoration: none;
+   color: black;
+    
+}
+
+.shop-now-button a:hover{
+    text-decoration: none;
+   color: black;
+    
+}
+#mainmenu{
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+#sub-menu{
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        color: white;
+   
+    
+}
 }
 
 
