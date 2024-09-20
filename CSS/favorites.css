@@ -354,12 +354,13 @@ padding-top: 5px;
   min-height: 45px;
   padding-left:30px ;
   padding-right: 18px;
-  color: #444444;
+  color: #444444;!important
   font-size: 18px;
   letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+    
 }
       .sidebar-categories:hover{
   -webkit-tap-highlight-color: transparent; /* For WebKit browsers (like Chrome, Safari) */
