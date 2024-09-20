@@ -229,6 +229,7 @@ nav span {
       padding-left: 20px;
       padding-top: 10px;
       align-items: center;
+        letter-spacing: 0.5px;
     }
     
    
@@ -359,6 +360,10 @@ padding-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+      .sidebar-categories:hover{
+  -webkit-tap-highlight-color: transparent; /* For WebKit browsers (like Chrome, Safari) */
+  background-color: rgb(230, 230, 230);
 }
 .sidebar-categories-container{
   padding: 20px 0px 10px 0px;
