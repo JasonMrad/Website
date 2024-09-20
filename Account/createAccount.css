@@ -18,10 +18,9 @@ body, header {
 
 }
 
-
 a:link {
     text-decoration: none;
-    color: white;
+  
 }
 
 
@@ -31,7 +30,7 @@ a:hover {
     
 }
 a:visited{
-  color: white;
+
   text-decoration: none;
 }
 
@@ -416,24 +415,61 @@ input[type="password"] {
   height: 100%;
   width: 100%;
 }
-@media (max-width: 943px) {
-  html{
-    width: 1216.9px;
-    color: black;
-  }
-  body{
-    width: 1216.9px;
-    overflow-x: scroll;
-    overflow-y:hidden;
-    height: 100%;
-    
-  
-  }
-  main{
-    width: 1216.9px;
-    height: 966px;
-  }
-
+.separator{
+  display: none;
+  justify-self: flex-start;align-items: center;height: 70px;width: 100%;box-sizing: border-box;background-color: whitesmoke;
 }
+.separator-content{
+  width: 50%;min-width: 50%;color: black;font-weight: bold;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        min-height: 100%;display: flex;justify-content: center;align-items: center;letter-spacing: 1px;
+}
+#spacing{
+  display: none;
+}
+@media (max-width: 950px) {
+  .container{
+    margin:0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+.login-button{
+  width: 100%;
+}
+input[type="date"],
+input[type="tel"],
+.nameText,
+input[type="email"],
+input[type="password"] {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 0px;
+}
+.iti{
+  width: 100%;
+}
+.form{
+  width: 100%;
+}
+.container{
+background-color: white;
+border: none;
+ height: 100%;
+  box-shadow: none;
+  overflow-y: visible;
+}
+main{
+  background-image: none;
+}
+.separator{
+  display: flex;
+}
+#spacing{
+  display: flex;
+}
+}
 
