@@ -46,7 +46,7 @@ a {
  
 
   
-  .policy-text{
+   .policy-text{
     font-weight:100;
     color: #393838;
   font-size: 13px;
@@ -54,7 +54,7 @@ a {
  
   .terms-text{
     font-weight:100;
-  color: #393838;
+    color: #393838;
   font-size: 13px;
   }
   .cookies-text{
@@ -63,3 +63,14 @@ a {
   font-size: 13px;
   }
   
+  .delivery-body{
+    padding-bottom: 50px;
+  }
+  @media (max-width: 950px) {
+
+    .delivery-body{
+      padding-bottom: 80px;
+    }
+  
+    
+    }
