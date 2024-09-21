@@ -63,14 +63,20 @@ a {
   font-size: 13px;
   }
   
+  
   .delivery-body{
     padding-bottom: 50px;
+  }
+  .privacy-body{
+    padding-bottom: 30px;
   }
   @media (max-width: 950px) {
 
     .delivery-body{
       padding-bottom: 80px;
     }
-  
+    .privacy-body{
+      padding-bottom: 50px;
+    }
     
     }
