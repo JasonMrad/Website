@@ -219,6 +219,7 @@ nav span {
     font-weight: 550;
     padding-left: 10px;
     font-size: 18px;
+    letter-spacing: 0.5px;
   }
   
   
@@ -229,9 +230,10 @@ nav span {
       padding-left: 20px;
       padding-top: 10px;
       align-items: center;
-        letter-spacing: 0.5px;
     }
-    
+    .page-wrapper,.page-content{
+      display: block;
+    }
    
    .favorites-container{
     width: 100vw;
@@ -354,15 +356,14 @@ padding-top: 5px;
   min-height: 45px;
   padding-left:30px ;
   padding-right: 18px;
-  color: #444444;!important
+  color: #444444;
   font-size: 18px;
   letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-    
 }
-      .sidebar-categories:hover{
+.sidebar-categories:hover{
   -webkit-tap-highlight-color: transparent; /* For WebKit browsers (like Chrome, Safari) */
   background-color: rgb(230, 230, 230);
 }
@@ -455,6 +456,9 @@ letter-spacing: 1px;
   }
   .search-container{
     align-items: center;display: flex;
+  }
+  .add-to-cart-div{
+    display: none;
   }
   }
   
