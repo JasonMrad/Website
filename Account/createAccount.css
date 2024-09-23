@@ -137,7 +137,7 @@ input[type="password"] {
 }
 
 .form{
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
  
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -145,7 +145,7 @@ input[type="password"] {
   }
   .form-item{
     position: relative;
-    margin-bottom: 15px
+    margin-bottom: 15px;
   }
   .form-item input{
     display: block;
