@@ -1,3 +1,64 @@
+
+function filterClick(){
+    const filter=document.getElementById("filter-button");
+
+
+    if(filter.style.backgroundColor=="white"){
+        filter.style.backgroundColor="black";
+        filter.style.color="white";
+        
+    }
+else{
+    filter.style.backgroundColor="white";
+        filter.style.color="black";
+        
+}
+
+}
+
+
+
+let startX, startY, endX, endY;
+
+// Select all elements with the class "product-favorite-card"
+const favoriteCards = document.querySelectorAll('.product-favorite-card');
+
+favoriteCards.forEach(card => {
+  // Attach touchstart event to each card
+  card.addEventListener('touchstart', function(event) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  }, false);
+
+  // Attach touchend event to detect the swipe
+  card.addEventListener('touchend', function(event) {
+    endX = event.changedTouches[0].clientX;
+    endY = event.changedTouches[0].clientY;
+    handleSwipe(card); // Pass the current card element to handleSwipe
+  }, false);
+});
+
+// Swipe detection logic for each card
+function handleSwipe(card) {
+  const deltaX = endX - startX;
+  const deltaY = endY - startY;
+
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    // Horizontal swipe
+    if (deltaX > 50) {
+      console.log('Swipe Right detected');
+      removeFavorites(card); // Call removeFavorites on this specific card
+    }
+  }
+}
+
+// Remove from favorites function
+function removeFavorites(card) {
+    removeFavorite(card);
+}
+
+
+
 function updateNoFavoritesMessage() {
     const noFavoritesMessage = document.getElementById('no-favorites-message');
 
