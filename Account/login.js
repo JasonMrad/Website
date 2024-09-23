@@ -19,8 +19,10 @@ if(window.innerWidth<950){document.getElementsByClassName('main-section')[0].sty
 function showRegisterForm(){
     login.style.display="none";
    register.style.display="block";
-    container[0].setAttribute('style', 'overflow-y: auto; overflow-x: hidden;');
-    if(window.innerWidth<950) {document.getElementsByClassName('main-section')[0].style.height="860px";}
+    container[0].setAttribute('style', 'overflow-y: auto; overflow-x: hidden;max-height:383px;');
+    if(window.innerWidth<950) {document.getElementsByClassName('main-section')[0].style.height="860px";
+        container[0].setAttribute('style', 'overflow-y: auto; overflow-x: hidden;');
+    }
     createAccountTab.style.borderBottom = "2px solid black"; // Remove border from Create Account tab
     loginTab.style.borderBottom = "none"; // Add border to Login tab
     loginTab.style.fontWeight="normal";
