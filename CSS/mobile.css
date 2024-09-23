@@ -1,5 +1,7 @@
 @media (max-width: 950px) {
-
+* {
+  -webkit-tap-highlight-color: transparent;
+}
     .img-logo {
         width: 47px;
         height: 50px;
