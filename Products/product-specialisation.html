@@ -1181,35 +1181,41 @@ width:100%;
                                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                                     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
                                     <script>
-                                      $(document).ready(function() {
-                                          // Initialize the image slider without autoplay
-                                          $('.image-slider').slick({
-                                              dots: true,
-                                              infinite: true,
-                                              speed: 500,
-                                              slidesToShow: 1,
-                                              slidesToScroll: 1,
-                                              arrows: false, // Remove previous and next buttons
-                                              autoplaySpeed: 3500 // Set the time each slide is shown (in milliseconds)
-                                          });
-                              
-                                          let hasPlayed = false; // Track if autoplay has started
-                              
-                                          // Create an Intersection Observer
-                                          const observer = new IntersectionObserver(entries => {
-                                              entries.forEach(entry => {
-                                                  if (entry.isIntersecting && !hasPlayed) {
-                                                      // Start autoplay when in view, only if it hasn't played yet
-                                                      $('.image-slider').slick('slickPlay');
-                                                      hasPlayed = true; // Mark as played
-                                                  }
-                                              });
-                                          }, { threshold: 0.0000000000000001 }); // Adjust threshold as needed
-                              
-                                          // Observe the slick container
-                                          const slickContainer = document.querySelector('.slick-container1');
-                                          observer.observe(slickContainer);
-                                      });
+                                     $(document).ready(function() {
+    // Initialize the image slider with autoplay enabled
+    $('.image-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false, // Remove previous and next buttons
+        autoplay: true, // Ensure autoplay is enabled
+        autoplaySpeed: 3500, // Set the time each slide is shown (in milliseconds)
+        pauseOnHover: false, // Allow autoplay to continue on hover
+        pauseOnFocus: false // Allow autoplay to continue when focused
+    });
+
+    // Optional: Intersection Observer if you want to stop autoplay when out of view
+    let hasPlayed = false; // Track if autoplay has started
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!hasPlayed) {
+                    $('.image-slider').slick('slickPlay'); // Start autoplay when in view
+                    hasPlayed = true; // Mark as played
+                }
+            } else {
+                $('.image-slider').slick('slickPause'); // Pause autoplay when out of view
+            }
+        });
+    }, { threshold: 0.1 }); // Adjust threshold for quicker triggering
+
+    // Observe the slick container
+    const slickContainer = document.querySelector('.slick-container1');
+    observer.observe(slickContainer);
+});
                                   </script>
                                    
                                       
