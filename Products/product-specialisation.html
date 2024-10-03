@@ -1625,7 +1625,8 @@ function setupObserver() {
 // Set up the observer initially
 setupObserver();
 
-
+// Re-run the observer setup on window resize
+window.addEventListener('resize', setupObserver);
 
 // Function to scroll smoothly to the target div when a title is clicked
 function scrollToTarget(targetID) {
@@ -1633,6 +1634,8 @@ function scrollToTarget(targetID) {
     if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+    let anchor=document.getElementsByClassName('anchor-div')[0];
+    anchor.style.top="0";
   }
   function changeImage(mainSrc) {
             document.getElementById('main-image').src = mainSrc;
