@@ -1,6 +1,6 @@
 document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('click', function() {
         // Redirect to special.html when a product card is clicked
-        window.location.href = 'product-redirection.html';
+        window.location.href = 'product-specialisation.html';
     });
 });
