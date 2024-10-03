@@ -1180,8 +1180,8 @@ width:100%;
                                 
                                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                                     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-                                    <script>
-                                     $(document).ready(function() {
+                                                                     <script>
+$(document).ready(function() {
     // Initialize the image slider with autoplay enabled
     $('.image-slider').slick({
         dots: true,
@@ -1196,7 +1196,6 @@ width:100%;
         pauseOnFocus: false // Allow autoplay to continue when focused
     });
 
-   
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -1204,7 +1203,8 @@ width:100%;
                
                     $('.image-slider').slick('slickPlay'); // Start autoplay when in view
                     hasPlayed = true; // Mark as played
-              
+                
+            } 
         });
     }, { threshold: 0.1 }); // Adjust threshold for quicker triggering
 
@@ -1212,7 +1212,9 @@ width:100%;
     const slickContainer = document.querySelector('.slick-container1');
     observer.observe(slickContainer);
 });
+
                                   </script>
+                                  
                                    
                                       
                                       </div>
