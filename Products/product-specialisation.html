@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 </head>
+    
         <link href="https://fonts.cdnfonts.com/css/trebuchet-ms-2" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/arial" rel="stylesheet">
                 <style>
@@ -962,7 +964,35 @@ font-weight: bold;
 .mobile-specialisation{
   display: none;
 }
+  .slick-container2 {
+    margin-top: 50px;
+            width: 100%; /* Full width */
+            height: 425px; /* Fixed height */
+            overflow:hidden; /* Prevent overflow */
+        }
+        
+        .slick-container2 img {
+        z-index: 100;
+            width: 100%; /* Responsive width */
+            height: 425px; /* Fixed height */
+           
+        }
+        .image-slider1 {
+          width: 100%; /* Full width */
 
+            height: 100%; /* Set slider height to 100% of the container */
+        }
+        .image-slider1 div {
+          width: 100%; /* Full width */
+            height: 100%; /* Each slide should take full height */
+           
+        }
+        .image-slider1 img {
+            width: 100%; /* Responsive width */
+            height: 100%; /* Fill height */
+            object-fit: scale-down; /* Maintain aspect ratio */
+          
+        }
 @media (max-width: 950px) {
   html,body{
   width: 100%;
@@ -1080,6 +1110,21 @@ width:100%;
             object-fit: cover; /* Maintain aspect ratio */
         }
   }
+          @media (min-width: 950px) and (max-width: 1160px)  {
+    
+    .product-description-header{
+      white-space: nowrap;
+    }
+    .product-description-body{
+      width: 100%;
+    }
+.product-description p{
+  width: 80%;
+}
+
+
+  }
+
   @media (min-width: 740px) {
     .slick-container1 {
             
@@ -1180,8 +1225,9 @@ width:100%;
                                 
                                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                                     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-                                                                     <script>
+                                                                      <script>
 $(document).ready(function() {
+  
     // Initialize the image slider with autoplay enabled
     $('.image-slider').slick({
         dots: true,
@@ -1197,20 +1243,7 @@ $(document).ready(function() {
     });
 
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-               
-                    $('.image-slider').slick('slickPlay'); // Start autoplay when in view
-                    hasPlayed = true; // Mark as played
-                
-            } 
-        });
-    }, { threshold: 0.1 }); // Adjust threshold for quicker triggering
-
-    // Observe the slick container
-    const slickContainer = document.querySelector('.slick-container1');
-    observer.observe(slickContainer);
+    $('.image-slider').slick('slickPlay');
 });
 
                                   </script>
@@ -1272,11 +1305,59 @@ DETAILS
     </div>
     </div>
     
-    <div class="product-description-img">
-    <img src="PEGASUS+PLUS.png" id="description-image">
+    <div class="slick-container2">
+      <div class="image-slider1">
+          <div><img src="PEGASUS+PLUS.png" alt="Description Image 1"></div>
+          <div><img src="PEGASUS+PLUS white black stripe BIG.png" alt="Description Image 2"></div>
+          <div><img src="PEGASUS+PLUS purple BIG.jpeg" alt="Description Image 3"></div>
+          <div><img src="PEGASUS+PLUS rose BIG.png" alt="Description Image 4"></div>
+          <div><img src="PEGASUS+PLUS black BIG.png" alt="Description Image 5"></div>
+          <div><img src="PEGASUS+PLUS blue BIG.png" alt="Description Image 6"></div>
+      </div>
+  </div>
     </div>
-    
-    </div>
+    <script>
+    $(document).ready(function() {
+  
+  // Initialize the image slider with autoplay enabled
+  $('.image-slider1').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false, // Remove previous and next buttons
+      autoplay: true, // Ensure autoplay is enabled
+      autoplaySpeed: 3500, // Set the time each slide is shown (in milliseconds)
+      pauseOnHover: false, // Allow autoplay to continue on hover
+      pauseOnFocus: false // Allow autoplay to continue when focused
+  });
+
+
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+             
+                  $('.image-slider').slick('slickPlay'); // Start autoplay when in view
+                  hasPlayed = true; // Mark as played
+              
+          } 
+      });
+  }, { threshold: 0.1 }); // Adjust threshold for quicker triggering
+
+  // Observe the slick container
+  const slickContainer = document.querySelector('.slick-container2');
+  observer.observe(slickContainer);
+});
+
+
+
+      
+      
+        
+  
+      
+                                        </script>
     <div class="specifications target-div" id="target3">
     <div class="specifications-header">Specifications</div>
     <div class="specifications-body">
@@ -1305,13 +1386,13 @@ DETAILS
  
     </div>
     <div class="select-size">Select size</div>
-    <div class="size-grid">
-     <div class="size" onclick="sizeSelected('xs')" id="xs">XS</div>
-     <div class="size" onclick="sizeSelected('s')" id="s">S</div>
-     <div class="size" onclick="sizeSelected('m')" id="m">M</div>
-     <div class="size" onclick="sizeSelected('l')" id="l">L</div>
-     <div class="size" onclick="sizeSelected('xl')" id="xl">XL</div>
-     <div class="size" onclick="sizeSelected('xxl')" id="xxl">2XL</div>
+   <div class="size-grid">
+     <div class="size" onclick="sizeSelected('Dxs')" id="Dxs">XS</div>
+     <div class="size" onclick="sizeSelected('Ds')" id="Ds">S</div>
+     <div class="size" onclick="sizeSelected('Dm')" id="Dm">M</div>
+     <div class="size" onclick="sizeSelected('Dl')" id="Dl">L</div>
+     <div class="size" onclick="sizeSelected('Dxl')" id="Dxl">XL</div>
+     <div class="size" onclick="sizeSelected('Dxxl')" id="Dxxl">2XL</div>
   </div>
   <div class="size-guide">
  <img src="size-guide.svg">&nbsp;<span>Size guide</span>
@@ -1640,10 +1721,11 @@ function scrollToTarget(targetID) {
     let anchor=document.getElementsByClassName('anchor-div')[0];
     anchor.style.top="0";
   }
-  function changeImage(mainSrc) {
+   function changeImage(mainSrc) {
             document.getElementById('main-image').src = mainSrc;
-            document.getElementById('description-image').src = mainSrc;
-      document.getElementById('main-image1').src = mainSrc;
+            document.getElementById('main-image1').src = mainSrc;
+          
+          
         }
 </script>
 <script src="../Javascript/footer-mobile.js">
