@@ -10,7 +10,8 @@
     .page-content {
     text-align: center;
     transition: 450ms;
-    background-color: honeydew;
+    background-color: white;
+         z-index: 100;
     }
     
     .sidebar {
@@ -18,7 +19,7 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    
+     z-index: 100;
     background-color: white;
     color: black;
     transition: 450ms;
