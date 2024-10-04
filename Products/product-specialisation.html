@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 </head>
     
         <link href="https://fonts.cdnfonts.com/css/trebuchet-ms-2" rel="stylesheet">
@@ -1728,6 +1727,45 @@ function scrollToTarget(targetID) {
           
         }
 </script>
+    <script>
+  // Function to load the Slick CSS
+  function loadSlickCSS() {
+      if (!document.getElementById('slickCSS')) {  // Check if it's not already added
+          var slickLink = document.createElement('link');
+          slickLink.rel = 'stylesheet';
+          slickLink.type = 'text/css';
+          slickLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css';
+          slickLink.id = 'slickCSS';  // Add an ID so we can remove it later
+          document.head.appendChild(slickLink);
+      }
+  }
+  
+  // Function to remove the Slick CSS
+  function removeSlickCSS() {
+      var slickLink = document.getElementById('slickCSS');
+      if (slickLink) {
+          slickLink.parentNode.removeChild(slickLink);  // Remove the CSS link if it exists
+      }
+  }
+  
+  // Function to check window width and conditionally load/remove Slick CSS
+  function checkWidth() {
+      if (window.innerWidth > 950) {
+          loadSlickCSS();  // Load Slick CSS for screens wider than 950px
+      } else {
+          removeSlickCSS();  // Remove Slick CSS for screens smaller than 950px
+      }
+  }
+  
+  // Initial check when the page loads
+  checkWidth();
+  
+  // Listen for window resize and re-check the condition
+  window.addEventListener('resize', function() {
+      checkWidth();
+  });
+  
+  </script>
 <script src="../Javascript/footer-mobile.js">
     
 
