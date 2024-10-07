@@ -1148,38 +1148,13 @@ display: none; /* Hides the scrollbar in WebKit-based browsers (Chrome, Safari, 
         border-bottom: 1px solid #d0d0d0;
      
       }
-      .size-guide-type{
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 8px;
-      }
-      .casual{
-        height: 100%;
-        width: 80px;
-        font-size: 18px;
-        border-bottom: 2.5px solid black;
-        display: flex;
-        font-weight: bold;
-        justify-content: center;
-        align-items: center;
-      }
-      .shoes{
-        height: 100%;
-        width: 80px;
-        font-size: 18px;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-      }
+     
       .table-div{
         height: 485px;
+          height: auto;
         width: 100%;
         margin-top: 2px;
+          overflow:auto;
       }
       tr{
         border-bottom:1px solid #d0d0d0;
@@ -1190,11 +1165,20 @@ display: none; /* Hides the scrollbar in WebKit-based browsers (Chrome, Safari, 
         font-size: 16px;
  color: #3b4248;
 width: 177.5px;
+           min-width: 70px;
 border-collapse: collapse;   }
 table {
             border-collapse: collapse; /* Removes spaces between cells */
             
         }
+        .theader{
+      text-align: left;
+      font-weight: bold;
+      color: #000;
+     }
+     .table-div::-webkit-scrollbar {
+display: none; /* Hides the scrollbar in WebKit-based browsers (Chrome, Safari, etc.) */
+}
      .colored-bg-table{
      
       background-color: rgb(245, 245, 245);
@@ -1362,90 +1346,8 @@ $(document).ready(function() {
 
                               </div>
                             <div class="size-guide-parent" id="size-guide-parent-div">
-                                  <div class="size-guide-div">
-                                  <div class="size-guide-header">
-                                    <div style="padding-left: 10px;display: flex;align-items: center;padding-top:10px;"><img src="../icon-adidas-logo.svg" style="width: 90px;height: 110px;object-fit: scale-down;"></div>
-                                   <div style="padding-right: 10px;padding-top:10px;"> <img src="../close (1).svg" onclick="closeSizeGuide()"></div>
-                                  </div>
-                                  <!--<div class="size-guide-type">
-                                    <div class="casual">Casual</div>
-                                    <div class="shoes">Shoes</div>
-                                    </div>-->
-                                  <div class="table-div">
-                                  <table width="100%" >
-                                  <tr style="background-color: #000;font-weight: bold;border: none;">
-                                    <td style="color: white;">Size</td>
-                                    <td style="color: white;">Small</td>
-                                    <td style="color: white;">Medium</td>
-                                    <td style="color: white;">Large</td>
-                                  </tr>
-                                  <tr style="font-weight: bold;">
-                                    <td style="color: #000;" class="theader">Neck</td>
-                                    
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Inches</td>
-                                    <td class="colored-bg-table" >13 - 14.5</td>
-                                    <td>15 - 16.5</td>
-                                    <td class="colored-bg-table" >17 - 18.5</td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Centimeters</td>
-                                    <td class="colored-bg-table" >33 - 37</td>
-                                    <td>38 - 42</td>
-                                    <td class="colored-bg-table" >43 - 50</td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Chest</td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Inches</td>
-                                    <td class="colored-bg-table" >30 - 36</td>
-                                    <td>38 - 44</td>
-                                    <td class="colored-bg-table" >46 - 56</td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Centimeters</td>
-                                    <td class="colored-bg-table" >76 - 91</td>
-                                    <td>97 - 112</td>
-                                    <td class="colored-bg-table" >117 - 147</td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Waist</td>
-                                   
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Inches</td>
-                                    <td class="colored-bg-table">27 - 31</td>
-                                    <td>32 - 38</td>
-                                    <td class="colored-bg-table">40 - 50</td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #000;font-weight: bold;" class="theader">Centimeters</td>
-                                    <td class="colored-bg-table">68 - 78</td>
-                                    <td>81 - 96</td>
-                                    <td class="colored-bg-table">101 - 127</td>
-                                  </tr>
-                                  
-                                  </table>
-                                  </div>
-                                  <div style="color: #212529;font-size: 14px;line-height: 25px;"><p><font style="font-weight: bold;color: #000;">Hint: </font>For the most accurate results, measure yourself in your undergarments.</p>
-                                  
-                                    <ul style="list-style-type: disc; padding-left: 25px;">
-                                      <li><font style="font-weight: bold;color: #000;">Neck: </font>Measure around the base of your neck, inserting your forefinger between the tape and your neck to allow ease in fit.</li>
-                                      <li><font style="font-weight: bold;color: #000;">Chest: </font>Measure around the fullest part of your chest, keeping tape firmly under your armpits and around your shoulder blades.</li>
-                                      <li><font style="font-weight: bold;color: #000;">Waist: </font>Measure around your waist, slightly below your natural waist, where you normally wear your pants. Insert your forefinger between the tape and your body to allow ease in fit.</li>
-                                      <li><font style="font-weight: bold;color: #000;">Sleeve Length: </font>Bend your arm slightly. Measure from center back neck, across your shoulder, down to your elbow, down to your wrist.</li>
-                                      <li><font style="font-weight: bold;color: #000;">Hip: </font>Measure around the fullest part of your hips, inserting your forefinger between the tape and your hip to allow ease in fit.</li>
-                                      <li><font style="font-weight: bold;color: #000;">Inseam: </font>Measure a similar pant that fits you well. Measure along the inseam, from the crotch seam to the bottom of the hem.</li>
-                                    </ul>
-                                    <h2>Doesn't Fit?</h2>
-                                    If it doesn't fit, return it within 28 days, as long as it's unworn, unwashed and unaltered.
-                                  See <a href="../Policies/returns.html" style="color: blueviolet;text-decoration: underline;">Returns Policy</a>.
-                                  <br>
-                                  <h2>Between Sizes?</h2>
-                                  If your measurements are in between those listed in the size chart, pick the next larger size.
-                                  </div>
+                                  <div class="size-guide-div" id="size-guide-div">
+                              
                                   </div>
                                                                   </div>
                               <div class="desktop-specialisation">
@@ -2005,5 +1907,298 @@ function closeSizeGuide() {
        
       <script src="../Javascript/marquee.js"></script>
      
-    
+    <script>
+    let r=Math.round(Math.random(0,2));
+    let sizeGuide=document.getElementById("size-guide-div");
+    let shoes=`<div class="size-guide-header" id="size-header">
+                                  
+                                  <div style="padding-left: 10px;display: flex;align-items: center;"><img src="../icon-adidas-logo.svg" style="width: 90px;height: 110px;object-fit: scale-down;"></div>
+                                 <div style="padding-right: 10px;"> <img src="../close (1).svg" onclick="closeSizeGuide()" style="z-index: 100000;"></div>
+                                </div>
+                                <!--<div class="size-guide-type">
+                                  <div class="casual">Casual</div>
+                                  <div class="shoes">Shoes</div>
+                                  </div>-->
+                                <div class="table-div">
+                                <table width="100%" >
+                                  <tr style="background-color: #000;">
+<td class="table-header" style="min-width: 130px;">Heel-toe (Inch)</td>                                  
+<td class="table-header">8.7"</td>
+<td class="table-header">8.9"</td>
+<td class="table-header">9.0"</td>
+<td class="table-header">9.2"</td>
+<td class="table-header">9.4"</td>
+<td class="table-header">9.5"</td>
+<td class="table-header">9.7"</td>
+<td class="table-header">9.8"</td>
+<td class="table-header">10.0"</td>
+<td class="table-header">10.2"</td>
+<td class="table-header">10.4"</td>
+<td class="table-header">10.5"</td>
+<td class="table-header">10.7"</td>
+<td class="table-header">10.9"</td>
+<td class="table-header">11.0"</td>
+<td class="table-header">11.2"</td>
+<td class="table-header">11.3"</td>
+<td class="table-header">11.5"</td>
+<td class="table-header">11.7"</td>
+<td class="table-header">11.9"</td>
+
+
+                                  </tr>
+                                  <tr>
+<td class="theader">UK</td>                                   
+<td class="colored-bg-table">3.5</td>
+<td>4</td>
+<td class="colored-bg-table">4.5</td>
+<td>5</td>
+<td class="colored-bg-table">5.5</td>
+<td>6</td>
+<td class="colored-bg-table">6.5</td>
+<td>7</td>
+<td class="colored-bg-table">7.5</td>
+<td>8</td>
+<td class="colored-bg-table">8.5</td>
+<td>9</td>
+<td class="colored-bg-table">9.5</td>
+<td>10</td>
+<td class="colored-bg-table">10.5</td>
+<td>11</td>
+<td class="colored-bg-table">11.5</td>
+<td>12</td>
+<td class="colored-bg-table">12.5</td>
+<td>13</td>
+                                    
+                                    
+                                </tr>
+
+                          <tr>
+<td class="theader">EU</td>
+<td class="colored-bg-table">36</td>
+<td>36.5</td>
+<td class="colored-bg-table">37</td>
+<td>37.5</td>
+<td class="colored-bg-table">38</td>
+<td>38.5</td>
+<td class="colored-bg-table">39</td>
+<td>39.5</td>
+<td class="colored-bg-table">40</td>
+<td>40.5</td>
+<td class="colored-bg-table">41</td>
+<td>41.5</td>
+<td class="colored-bg-table">42</td>
+<td>42.5</td>
+<td class="colored-bg-table">43</td>
+<td>43.5</td>
+<td class="colored-bg-table">44</td>
+<td>44.5</td>
+<td class="colored-bg-table">45</td>
+<td>45.5</td>
+                                                                              
+                                                                              
+            </tr>
+                                                                                                          
+                                                                                                          
+
+            <tr>
+<td  class="theader">US - Men</td>
+<td class="colored-bg-table">4</td>
+<td>4.5</td>
+<td class="colored-bg-table">5</td>
+<td>5.5</td>
+<td class="colored-bg-table">6</td>
+<td>6.5</td>
+<td class="colored-bg-table">7</td>
+<td>7.5</td>
+<td class="colored-bg-table">8</td>
+<td>8.5</td>
+<td class="colored-bg-table">9</td>
+<td>9.5</td>
+<td class="colored-bg-table">10</td>
+<td>10.5</td>
+<td class="colored-bg-table">11</td>
+<td>11.5</td>
+<td class="colored-bg-table">12</td>
+<td>12.5</td>
+<td class="colored-bg-table">13</td>
+<td>13.5</td>
+
+
+            </tr>
+                        <tr>
+<td  class="theader">US - Women</td>
+<td class="colored-bg-table">5</td>
+<td>5.5</td>
+<td class="colored-bg-table">6</td>
+<td>6.5</td>
+<td class="colored-bg-table">7</td>
+<td>7.5</td>
+<td class="colored-bg-table">8</td>
+<td>8.5</td>
+<td class="colored-bg-table">9</td>
+<td>9.5</td>
+<td class="colored-bg-table">10</td>
+<td>10.5</td>
+<td class="colored-bg-table">11</td>
+<td>11.5</td>
+<td class="colored-bg-table">12</td>
+<td>12.5</td>
+<td class="colored-bg-table">13</td>
+<td>13.5</td>
+<td class="colored-bg-table">14</td>
+<td>14.5</td>
+
+
+            </tr>
+            <tr>
+<td class="theader">Centimeters</td>
+<td class="colored-bg-table">22.1</td>
+<td>22.5</td>
+<td class="colored-bg-table">22.9</td>
+<td>23.3</td>
+<td class="colored-bg-table">23.8</td>
+<td>24.2</td>
+<td class="colored-bg-table">24.6</td>
+<td>25</td>
+<td class="colored-bg-table">25.5</td>
+<td>25.9</td>
+<td class="colored-bg-table">26.3</td>
+<td>26.7</td>
+<td class="colored-bg-table">27.1</td>
+<td>27.6</td>
+<td class="colored-bg-table">28</td>
+<td>28.4</td>
+<td class="colored-bg-table">28.8</td>
+<td>29.3</td>
+<td class="colored-bg-table">29.7</td>
+<td>30.1</td>             
+            </tr>
+                                </table>
+                                </div>
+
+                                <div style="color: #212529;font-size: 14px;line-height: 25px;"><p>Scroll horizontaly to see more</p>
+                                  
+                                
+                                <br>
+                                <h2>In Between Sizes?</h2>
+                                For tight fit, go one size down.
+                                <br>
+                                For loose fit, go one size up.
+                                <br>
+                                <h2>How To Measure</h2>
+                                Follow these easy steps to get the right size. For the best fit, measure your feet at the end of the day.<br>
+                                <ol>
+                                  <li>Step on a piece of paper with your heel slightly touching a wall behind.</li>
+                                  <li>Mark the end of your longest toe on the paper (you might need a friend to help you) and measure from the wall to the marking.</li>
+                                  <li>Do the same for the other foot and compare measurements with our size chart to get the right size.</li>
+                                </ol>
+                              <br>
+                              <h2>Not The Right Size Or Color?</h2>
+                              No problem, we offer free size exchanges for 60 days and we have free 
+                              <a href="../Policies/returns.html" style="color: blueviolet;text-decoration: underline;">return service</a>.
+                                 
+                                </div>
+                                <div style="width: 100%;height: 40px;"></div>
+                                </div>
+                                </div>
+                                `;
+
+                                let clothes=`<div class="size-guide-header">
+                                    <div style="padding-left: 10px;display: flex;align-items: center;padding-top:10px;"><img src="../icon-adidas-logo.svg" style="width: 90px;height: 110px;object-fit: scale-down;"></div>
+                                   <div style="padding-right: 10px;padding-top:10px;"> <img src="../close (1).svg" onclick="closeSizeGuide()"></div>
+                                  </div>
+                                  <!--<div class="size-guide-type">
+                                    <div class="casual">Casual</div>
+                                    <div class="shoes">Shoes</div>
+                                    </div>-->
+                                  <div class="table-div">
+                                  <table width="100%" >
+                                  <tr style="background-color: #000;font-weight: bold;border: none;">
+                                    <td style="color: white;">Size</td>
+                                    <td style="color: white;">Small</td>
+                                    <td style="color: white;">Medium</td>
+                                    <td style="color: white;">Large</td>
+                                  </tr>
+                                  <tr style="font-weight: bold;">
+                                    <td style="color: #000;" class="theader">Neck</td>
+                                    
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Inches</td>
+                                    <td class="colored-bg-table" >13 - 14.5</td>
+                                    <td>15 - 16.5</td>
+                                    <td class="colored-bg-table" >17 - 18.5</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Centimeters</td>
+                                    <td class="colored-bg-table" >33 - 37</td>
+                                    <td>38 - 42</td>
+                                    <td class="colored-bg-table" >43 - 50</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Chest</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Inches</td>
+                                    <td class="colored-bg-table" >30 - 36</td>
+                                    <td>38 - 44</td>
+                                    <td class="colored-bg-table" >46 - 56</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Centimeters</td>
+                                    <td class="colored-bg-table" >76 - 91</td>
+                                    <td>97 - 112</td>
+                                    <td class="colored-bg-table" >117 - 147</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Waist</td>
+                                   
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Inches</td>
+                                    <td class="colored-bg-table">27 - 31</td>
+                                    <td>32 - 38</td>
+                                    <td class="colored-bg-table">40 - 50</td>
+                                  </tr>
+                                  <tr>
+                                    <td style="color: #000;font-weight: bold;" class="theader">Centimeters</td>
+                                    <td class="colored-bg-table">68 - 78</td>
+                                    <td>81 - 96</td>
+                                    <td class="colored-bg-table">101 - 127</td>
+                                  </tr>
+                                  
+                                  </table>
+                                  </div>
+                                  <div style="color: #212529;font-size: 14px;line-height: 25px;"><p><font style="font-weight: bold;color: #000;">Hint: </font>For the most accurate results, measure yourself in your undergarments.</p>
+                                  
+                                    <ul style="list-style-type: disc; padding-left: 25px;">
+                                      <li><font style="font-weight: bold;color: #000;">Neck: </font>Measure around the base of your neck, inserting your forefinger between the tape and your neck to allow ease in fit.</li>
+                                      <li><font style="font-weight: bold;color: #000;">Chest: </font>Measure around the fullest part of your chest, keeping tape firmly under your armpits and around your shoulder blades.</li>
+                                      <li><font style="font-weight: bold;color: #000;">Waist: </font>Measure around your waist, slightly below your natural waist, where you normally wear your pants. Insert your forefinger between the tape and your body to allow ease in fit.</li>
+                                      <li><font style="font-weight: bold;color: #000;">Sleeve Length: </font>Bend your arm slightly. Measure from center back neck, across your shoulder, down to your elbow, down to your wrist.</li>
+                                      <li><font style="font-weight: bold;color: #000;">Hip: </font>Measure around the fullest part of your hips, inserting your forefinger between the tape and your hip to allow ease in fit.</li>
+                                      <li><font style="font-weight: bold;color: #000;">Inseam: </font>Measure a similar pant that fits you well. Measure along the inseam, from the crotch seam to the bottom of the hem.</li>
+                                    </ul>
+                                    <h2>Doesn't Fit?</h2>
+                                    If it doesn't fit, return it within 28 days, as long as it's unworn, unwashed and unaltered.
+                                  See <a href="../Policies/returns.html" style="color: blueviolet;text-decoration: underline;">Returns Policy</a>.
+                                  <br>
+                                  <h2>Between Sizes?</h2>
+                                  If your measurements are in between those listed in the size chart, pick the next larger size.
+                                <div style="width: 100%;height: 40px;"></div>  
+                                </div>
+                                  `;
+    console.log(r);
+   
+   
+  
+    if(r==0){
+      sizeGuide.innerHTML=shoes;
+
+    }
+    else{
+      sizeGuide.innerHTML=clothes;
+    }
+
+  </script>
 </html>
